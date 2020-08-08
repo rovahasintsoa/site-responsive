@@ -13,6 +13,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="script/jquery-3.5.1.min.js"></script>
   <script src="script/bootstrap.js"></script>
+  <script src="main.js" charset="utf-8"></script>
 
 </head>
 
@@ -28,8 +29,8 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <form class="form-inline" action="index.html" method="post">
           <div class="input-group">
-            <input type="text" name="" value="" class="form control mr-2">
-            <button type="button" name="button" class="btn-success btn-outline">recherche</button>
+            <input type="text" name="" value="" class="form-control mr-2">
+            <button type="button" name="button" class="btn btn-success btn-outline">recherche</button>
           </div>
         </form>
         <ul class="navbar-nav ml-auto">
@@ -39,13 +40,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#aide">Aide</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Contact">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle ="dropdown" href="#">Compte</a>
@@ -65,13 +66,54 @@
     <div class="row">
 
       <div class="col-lg-3">
+        <h1 class="my-2">Catégorie</h1>
+          <div class="nav-item" id="div1">
+            <ul>
+              <li>
+                <a class="nav-link dropdown-toggle tech" data-toggle ="dropdown" href="#">High-tech</a>
+                <ul class="tech" id="tech">
+                  <li class="liste">
+                    <a href="#">Smartphone</a>
+                  </li>
+                  <li class="liste">
+                    <a href="#">TV</a>
+                  </li>
+                  <li class="liste">
+                    <a href="#">Audio</a>
+                  </li>
+                  <li class="liste">
+                    <a href="#">Accessoires high-tech</a>
+                  </li>
+                </ul>
+              </li>
 
-        <h1 class="my-4">e-Varotra</h1>
-        <div class="list-group">
-          <a href="#" class="list-group-item">High-tech</a>
-          <a href="#" class="list-group-item">Sport et loisir</a>
-          <a href="#" class="list-group-item">Music et sono</a>
-        </div>
+              <li><a class="nav-link dropdown-toggle info" data-toggle ="dropdown" href="#">Informatique</a>
+                <ul class="info" id="info">
+                  <li class="liste2">
+                    <a href="#">Stockage</a>
+                  </li>
+                  <li class="liste2">
+                    <a href="#">Ecran PC</a>
+                  </li>
+                  <li class="liste2">
+                    <a href="#">Gamming</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="nav-link dropdown-toggle sono" data-toggle ="dropdown" href="#">Music et sono</a>
+                <ul class="sono" id="sono">
+                  <li class="liste3">
+                    <a href="#">Accessoires music et sono</a>
+                  </li>
+                  <li class="liste3">
+                    <a href="#">Instrument de music</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
 
       </div>
       <!-- /.col-lg-3 -->
@@ -206,8 +248,59 @@
         </div>
         <!-- /.row -->
 
+
+        </div>
+        <!-- /.row -->
       </div>
       <!-- /.col-lg-9 -->
+      <div class="row" id="Compte">
+        <div class="col-lg-4" id="ident">
+          <h1>Connexion</h1>
+          <hr>
+          <p>Connectez-vous à votre compte. </p>
+          <form>
+
+              <div class="form-group">
+                <label for="nom">Identifiant ou adresse de messagerie *:</label>
+                <input type="text" class="form-control" id="nom">
+              </div>
+
+              <div class="form-group">
+                <label for="pass">Mot de passe *:</label>
+                <input type="password" class="form-control" id="pass">
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="c1" id="ck">
+                <label class="form-check-label" for="ck"> Se souvenir de moi</label><br>
+              </div>
+              <button class="btn btn-primary" type="button" name="button">Identification</button>
+          </form>
+              <a href="#">Mot de passe oublier?</a>
+        </div>
+
+        <span class="vertical-line"></span>
+
+        <div class="col-lg-5" id="inscrire">
+          <h1>S’enregistrer</h1>
+          <p> Créez un nouveau compte dès aujourd'hui pour profiter des avantages d'une expérience d'achat personnalisée. </p>
+          <form>
+            <div class="form-group">
+              <label for="identite">Identifiant *</label>
+              <input type="text" class="form-control" id="identite">
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse de messagerie *:</label>
+              <input type="mail" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="mot">Adresse de messagerie *:</label>
+              <input type="password" class="form-control" id="mot">
+            </div>
+            <p>Vos données personnelles seront utilisées pour vous accompagner au cours de votre visite du site web, gérer l’accès à votre compte, et pour d’autres raisons décrites dans notre <a href="#">politique de confidentialité.</a>
+            </p>
+            <button class="btn btn-primary" type="button" name="button">S'enregistrer</button>
+          </form>
+        </div>
 
     </div>
     <!-- /.row -->
@@ -216,17 +309,36 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark" >
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Website 2020</p>
-    </div>
-    <div class="container" id="Contact">
-      <p style="color:white">Tel: +261 34 61 623 04</p>
-      <p style="color:white">e-mail : rovakely40@gmail.com</p>
-      <p style="color:blue">Facebook <a href="http://www.Facebook.com/rova.nambinina"></a> </p>
-    </div>
-    <!-- /.container -->
-  </footer>
+  <footer class="site-footer">
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-8 col-md-4">
+             <h6 id="contact">Contact</h6>
+             <p class="text-justify">Des question? Appelez-nous</p>
+             <p>(+261)34 61 623 04</p>
+             <p>Adresse <br> Analakely, route de l'independance </p>
+           </div>
+
+           <div class="col-xs-8 col-md-4">
+             <h6 id="aide">Besoin d'aide?</h6>
+             <ul class="footer-links">
+               <li><a href="#">Comment acheter?</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">aide</a></li>
+             </ul>
+           </div>
+
+           <div class="col-xs-8 col-md-4">
+             <ul class="footer-links">
+               <li><a href="#">Condition général de Vente</a></li>
+               <li><a href="#">F.A.Q</a></li>
+               <li><a href="#">Contribute</a></li>
+               <li><a href="#">Polique de confidentialité</a></li>
+               <li><a href="#">Mentions légal</a></li>
+             </ul>
+           </div>
+         </div>
+ </footer>
 
 </body>
 
